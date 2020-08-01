@@ -1,6 +1,22 @@
 <template>
   <div class="home">
-    <e-button>按钮</e-button>
+    <e-button >
+      按钮
+    </e-button>
+    <e-button icon="settings">
+      按钮
+    </e-button>
+    <e-button icon="settings" icon-position="right">
+      按钮
+    </e-button>
+    <e-button :loading="loading1" icon-position="left" @click="loading1 = !loading1">
+      按钮
+    </e-button>
+    <e-button-group>
+      <e-button icon="left">上一页</e-button>
+      <e-button >更多</e-button>
+      <e-button icon="right" icon-position="right">下一页</e-button>
+    </e-button-group>
   </div>
 </template>
 
@@ -9,18 +25,18 @@
 // import Vue from "vue";
 
 import eButton from "@/components/button.vue";
-// import ButtonGroup from "@/components/button-group.vue";
+import eButtonGroup from "@/components/button-group.vue";
 // Vue.component('e-button', Button)
 // Vue.component('e-icon', Icon)
-// Vue.component('e-button-group', ButtonGroup)
-
-// import  Button from  './components/button'
-// import  Icon from  './components/icon'
-// import ButtonGroup from './components/button-group'
 export default {
   name: "Home",
   components: {
-    eButton
+    eButton, eButtonGroup
+  },
+  data(){
+    return {
+      loading1: false
+    }
   }
 };
 </script>
