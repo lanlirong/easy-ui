@@ -1,29 +1,10 @@
 # easy-ui
+一个基于vue的UI组件库
 
-## Project setup
-```
-yarn install
-```
+## 安装
+使用本框架前，请在css中开启border-box 
 
-### Compiles and hot-reloads for development
 ```
-yarn serve
+* {box-sizing: border-box}
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+ 
