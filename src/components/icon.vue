@@ -1,7 +1,7 @@
 <template>
     <svg  class="e-icon">
         <!--<use :xlink:href=`#i-${name}`></use>-->
-        <use :xlink:href=`#i-${name}`></use>
+        <use :xlink:href="`#i-${name}`"></use>
 
     </svg>
 </template>
@@ -13,7 +13,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .e-icon {
         width: 1em;
         height: 1em;

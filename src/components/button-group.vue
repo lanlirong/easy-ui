@@ -18,7 +18,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .e-button-group {
     display: inline-flex;
     vertical-align: middle;

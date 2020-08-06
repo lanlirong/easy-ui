@@ -17,6 +17,11 @@
       <e-button >更多</e-button>
       <e-button icon="right" icon-position="right">下一页</e-button>
     </e-button-group>
+    <hr>
+    <e-input value="输入框"></e-input>
+    <e-input value="输入框" disabled></e-input>
+    <e-input value="输入框" readonly></e-input>
+    <e-input value="输入框" error="姓名不能少于两个字符"></e-input>
   </div>
 </template>
 
@@ -26,12 +31,14 @@
 
 import eButton from "@/components/button.vue";
 import eButtonGroup from "@/components/button-group.vue";
+import eInput from "@/components/input.vue";
+
 // Vue.component('e-button', Button)
 // Vue.component('e-icon', Icon)
 export default {
   name: "Home",
   components: {
-    eButton, eButtonGroup
+    eButton, eButtonGroup,eInput
   },
   data(){
     return {
@@ -40,3 +47,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+  hr {
+    margin: 20px 0;
+  }
+</style>
