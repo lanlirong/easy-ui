@@ -36,6 +36,24 @@
       <e-button style="margin-right: 8px">
         应用接口
       </e-button>
+    <hr>
+    <e-row gutter="20">
+      <e-col span="8" >1</e-col>
+      <e-col span="16" >1</e-col>
+    </e-row>
+    <e-row>
+      <e-col span="2"></e-col>
+      <e-col span="20" offset="2"></e-col>
+    </e-row>
+    <e-row>
+      <e-col span="2"></e-col>
+      <e-col span="4" offset="6"></e-col>
+    </e-row>
+    <e-row gutter="40">
+      <e-col>1</e-col>
+      <e-col>2</e-col>
+      <e-col>3</e-col>
+    </e-row>
   </div>
 </template>
 
@@ -46,13 +64,12 @@
 import eButton from "@/components/button.vue";
 import eButtonGroup from "@/components/button-group.vue";
 import eInput from "@/components/input.vue";
-
-// Vue.component('e-button', Button)
-// Vue.component('e-icon', Icon)
+import eRow from "@/components/row.vue";
+import eCol from "@/components/col.vue";
 export default {
   name: "Home",
   components: {
-    eButton, eButtonGroup,eInput
+    eButton, eButtonGroup,eInput,eRow, eCol
   },
   data(){
     return {
