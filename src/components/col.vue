@@ -38,9 +38,9 @@
 
 <style lang="scss" scoped>
 .col {
-    height: 100px;
+    height: 50px;
     background: grey;
-    width: 50%;
+    /*width: 50%;*/
     border: 1px solid red;
 
     $class-prefix: col-;

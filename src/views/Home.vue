@@ -45,9 +45,8 @@
       <e-col span="2"></e-col>
       <e-col span="20" offset="2"></e-col>
     </e-row>
-    <e-row>
+    <e-row align="right">
       <e-col span="2"></e-col>
-      <e-col span="4" offset="6"></e-col>
     </e-row>
     <e-row gutter="40">
       <e-col>1</e-col>
