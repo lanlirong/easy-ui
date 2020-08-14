@@ -18,7 +18,8 @@
       <e-button icon="right" icon-position="right">下一页</e-button>
     </e-button-group>
     <hr>
-    <e-input value="输入框"></e-input>
+    <e-input value="输入框"  @change="inputChange()"></e-input>
+    <e-input value="输入框"  v-model="message"></e-input>
     <e-input value="输入框" disabled></e-input>
     <e-input value="输入框" readonly></e-input>
     <e-input value="输入框" error="姓名不能少于两个字符"></e-input>
@@ -55,7 +56,13 @@ export default {
   },
   data(){
     return {
-      loading1: false
+      loading1: false,
+      message: ''
+    }
+  },
+  methods: {
+    inputChange(e) {
+      console.log(e.target.value)
     }
   }
 };
