@@ -38,8 +38,16 @@
       </e-button>
     <hr>
     <e-row gutter="20">
-      <e-col span="8" >1</e-col>
-      <e-col span="16" >1</e-col>
+      <e-col span="8" :phone="{span:24}" :ipad="{span: 12}" :narrowPc="{span: 8}" :pc="{span: 6} " :widePc="{span: 4}">1</e-col>
+      <e-col span="8" :phone="{span:24}" :ipad="{span: 12}" :narrowPc="{span: 8}" :pc="{span: 6}" :widePc="{span: 4}">1</e-col>
+      <e-col span="8" :phone="{span:24}" :ipad="{span: 12}" :narrowPc="{span: 8}" :pc="{span: 6}" :widePc="{span: 4}">1</e-col>
+      <e-col span="8" :phone="{span:24}" :ipad="{span: 12}" :narrowPc="{span: 8}" :pc="{span: 6}" :widePc="{span: 4}">1</e-col>
+      <e-col span="8" :phone="{span:24}" :ipad="{span: 12}" :narrowPc="{span: 8}" :pc="{span: 6}" :widePc="{span: 4}">1</e-col>
+      <e-col span="8" :phone="{span:24}" :ipad="{span: 12}" :narrowPc="{span: 8}" :pc="{span: 6}" :widePc="{span: 4}">1</e-col>
+    </e-row>
+    <e-row gutter="20">
+      <e-col span="2" :phone="{span:24}" :ipad="{span: 8}" :pc="{span: 4}">1</e-col>
+      <e-col span="22" :phone="{span:24}" :ipad="{span: 16}" :pc="{span: 20}">1</e-col>
     </e-row>
     <e-row>
       <e-col span="2"></e-col>
