@@ -1,5 +1,41 @@
 <template>
   <div class="home">
+    <e-layout style="height: 500px;border: 1px solid pink">
+      <e-header class="demo">header</e-header>
+      <e-content class="demo">content</e-content>
+      <e-footer class="demo">footer</e-footer>
+    </e-layout>
+
+    <hr>
+    <e-layout style="height: 400px;border: 1px solid pink">
+      <e-header class="demo">header</e-header>
+      <e-layout>
+        <e-sider class="demo">sider</e-sider>
+        <e-content class="demo">content</e-content>
+      </e-layout>
+      <e-footer class="demo">footer</e-footer>
+    </e-layout>
+    <hr>
+    <e-layout style="height: 400px;border: 1px solid pink">
+      <e-sider class="demo">sider</e-sider>
+
+      <e-layout>
+        <e-header class="demo">header</e-header>
+        <e-content class="demo">content</e-content>
+        <e-footer class="demo">footer</e-footer>
+
+      </e-layout>
+    </e-layout>
+    <hr>
+    <e-layout style="height: 400px;border: 1px solid pink">
+      <e-header class="demo">header</e-header>
+      <e-layout>
+        <e-content class="demo">content</e-content>
+        <e-sider class="demo">sider</e-sider>
+      </e-layout>
+      <e-footer class="demo">footer</e-footer>
+    </e-layout>
+    <hr>
     <e-button >
       关联应用
     </e-button>
@@ -73,10 +109,16 @@ import eButtonGroup from "@/components/button-group.vue";
 import eInput from "@/components/input.vue";
 import eRow from "@/components/row.vue";
 import eCol from "@/components/col.vue";
+import eLayout from "@/components/layout.vue";
+import eHeader from "@/components/header.vue";
+import eContent from "@/components/content.vue";
+import eFooter from "@/components/footer.vue";
+import eSider from "@/components/sider.vue";
+
 export default {
   name: "Home",
   components: {
-    eButton, eButtonGroup,eInput,eRow, eCol
+    eButton, eButtonGroup,eInput,eRow, eCol, eLayout,eHeader,eContent,eFooter,eSider
   },
   data(){
     return {
@@ -95,5 +137,24 @@ export default {
 <style lang="scss">
   hr {
     margin: 20px 0;
+  }
+  .demo {
+    min-height: 100px;
+  }
+.sider {
+  background-color: #666;
+  width: 200px;
+}
+  .header {
+    background-color: #999;
+    height: 100px;
+  }
+  .footer {
+    background-color: #ccc;
+    height: 50px;
+  }
+  .content {
+    background-color: #eee;
+
   }
 </style>
