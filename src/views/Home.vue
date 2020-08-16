@@ -1,5 +1,7 @@
 <template>
   <div class="home">
+<e-button @click="showToast">show toast</e-button>
+    <hr>
     <e-layout style="height: 500px;border: 1px solid pink">
       <e-header class="demo">header</e-header>
       <e-content class="demo">content</e-content>
@@ -114,7 +116,6 @@ import eHeader from "@/components/header.vue";
 import eContent from "@/components/content.vue";
 import eFooter from "@/components/footer.vue";
 import eSider from "@/components/sider.vue";
-
 export default {
   name: "Home",
   components: {
@@ -126,9 +127,23 @@ export default {
       message: ''
     }
   },
+  created() {
+  },
   methods: {
     inputChange(e) {
       console.log(e.target.value)
+    },
+    showToast() {
+      this.$toast('我是提示信息',{
+          position: 'middle',
+          closeButton: {
+              text: '好的',
+              callback() {
+                  console.log('zhidao')
+              }
+          },
+          enableHtml: true
+      })
     }
   }
 };

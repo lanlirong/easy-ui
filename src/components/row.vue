@@ -14,7 +14,7 @@
             align: {
                 type: [Number, String],
                 validator(value) {
-                   return ['left','right','center'].includes(value)
+                   return ['left','right','center'].indexOf(value)>= 0
                 }
             }
 
