@@ -1,5 +1,5 @@
 <template>
-    <div class="col" :style="colStyle" :class="colClass">
+    <div class="e-col" :style="colStyle" :class="colClass">
         <slot></slot>
     </div>
 </template>
@@ -83,7 +83,7 @@
 </script>
 
 <style lang="scss" scoped>
-.col {
+.e-col {
     height: 50px;
     background: grey;
     /*width: 50%;*/

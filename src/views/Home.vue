@@ -134,26 +134,26 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   hr {
     margin: 20px 0;
   }
   .demo {
     min-height: 100px;
   }
-.sider {
+.e-sider {
   background-color: #666;
   width: 200px;
 }
-  .header {
+  .e-header {
     background-color: #999;
     height: 100px;
   }
-  .footer {
+  .e-footer {
     background-color: #ccc;
     height: 50px;
   }
-  .content {
+  .e-content {
     background-color: #eee;
 
   }

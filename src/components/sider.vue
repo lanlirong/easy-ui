@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-    <div class="sider" v-if="visible">
+    <div class="e-sider" v-if="visible">
         <slot></slot>
         <button  @click="hide">close</button>
     </div>
@@ -24,7 +24,7 @@
     }
 </script>
 <style lang="scss" scoped>
-    .sider {
+    .e-sider {
         position: relative;
         & button {
             position: absolute;

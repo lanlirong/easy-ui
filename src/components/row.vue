@@ -1,5 +1,5 @@
 <template>
-    <div class="row" :style="rowStyle" :class="rowClass">
+    <div class="e-row" :style="rowStyle" :class="rowClass">
         <slot></slot>
     </div>
 </template>
@@ -28,7 +28,7 @@
             },
             rowClass() {
                 let {align} = this
-                return [align &&`row-${align}`]
+                return [align &&`e-row-${align}`]
             }
 
         },
@@ -41,7 +41,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .row {
+    .e-row {
         display: flex;
         flex-wrap: wrap;
         &-left{
