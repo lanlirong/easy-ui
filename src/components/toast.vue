@@ -1,12 +1,12 @@
 <template>
     <div class="e-toast" ref="toast" :class="toastClass">
-       <div class="message">
-           <slot v-if="!enableHtml"></slot>
-           <div v-else v-html="$slots.default[0]"></div>
+           <div class="message">
+               <slot v-if="!enableHtml"></slot>
+               <div v-else v-html="$slots.default[0]"></div>
+           </div>
+           <div class="line" ref="line"></div>
+           <span class="close" v-if="closeButton" @click="handleClose">{{closeButton.text}}</span>
        </div>
-        <div class="line" ref="line"></div>
-        <span class="close" v-if="closeButton" @click="handleClose">{{closeButton.text}}</span>
-    </div>
 </template>
 
 <script>
@@ -19,7 +19,7 @@
             },
             autoCloseDelay: {
                 type: Number,
-                default: 50
+                default: 4
             },
             closeButton: {
                 type: Object,
@@ -64,6 +64,7 @@
         methods: {
             close() {
                 this.$el.remove()
+                this.$emit('beforeClose')
                 this.$destroy()
             },
             handleClose() {
@@ -80,6 +81,7 @@
     $font-size: 14px;
     $toast-min-height: 40px;
     $toast-bg: rgba(0,0,0,0.7);
+    $animation-duration: 300ms;
     .e-toast {
         position: fixed;
         left: 50%;
@@ -110,15 +112,46 @@
     .toast-position-top{
         top: 5%;
         transform: translate(-50%);
-
+        animation: slide-down $animation-duration;
     }
     .toast-position-bottom{
         top: 90%;
         transform: translate(-50%);
+        animation: slide-up $animation-duration;
 
     }
     .toast-position-middle{
         top: 50%;
         transform: translate(-50%, -50%);
+        animation: slide-center $animation-duration;
+
+    }
+    @keyframes slide-down {
+        0% {
+            opacity: 0;
+            transform: translate(-50%,-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(-50%,0%);
+        }
+    }
+    @keyframes slide-up {
+        0% {
+            opacity: 0;
+            transform: translate(-50%,100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(-50%,0%);
+        }
+    }
+    @keyframes slide-center {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 </style>

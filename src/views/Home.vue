@@ -135,7 +135,7 @@ export default {
     },
     showToast() {
       this.$toast('我是提示信息',{
-          position: 'middle',
+          position: 'top',
           closeButton: {
               text: '好的',
               callback() {
