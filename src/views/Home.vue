@@ -39,7 +39,7 @@
     </e-layout>
     <hr>
     <e-button >
-      关联应用
+        按钮
     </e-button>
     <e-button icon="settings">
       按钮
