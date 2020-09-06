@@ -24,10 +24,10 @@
         <div class="bottom">
             <div>
                 <e-icon name="left"></e-icon>
-                <a>无</a></div>
+                <a  @click="toComponent('/button')">按钮</a></div>
             <div>
-                <a>输入框</a>
-                <e-icon name="right"></e-icon>
+                <a  @click="toComponent('/layout')">布局</a>
+                <e-icon name="right" ></e-icon>
             </div>
 
         </div>
@@ -125,7 +125,13 @@
         },
         mounted() {
         },
-        methods: {}
+        methods: {
+            toComponent(path) {
+                this.$router.push(
+                    path
+                )
+            }
+        }
 
     }
 </script>

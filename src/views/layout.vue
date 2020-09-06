@@ -43,9 +43,9 @@
         <div class="bottom">
             <div>
                 <e-icon name="left"></e-icon>
-                <a>无</a></div>
+                <a  @click="toComponent('/input')">输入框</a></div>
             <div>
-                <a>输入框</a>
+                <a  @click="toComponent('/container')">栅格系统</a>
                 <e-icon name="right"></e-icon>
             </div>
 
@@ -156,7 +156,13 @@
         },
         mounted() {
         },
-        methods: {}
+        methods: {
+            toComponent(path) {
+                this.$router.push(
+                    path
+                )
+            }
+        }
 
     }
 </script>

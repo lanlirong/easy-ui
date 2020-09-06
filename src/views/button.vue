@@ -38,11 +38,12 @@
         <!--下一个-->
         <div class="bottom">
             <div>
-                <e-icon name="left"></e-icon>
-                <a>无</a></div>
+                <!--<e-icon name="left"></e-icon>-->
+                <!--<a>无</a>-->
+            </div>
             <div>
-                <a>输入框</a>
-                <e-icon name="right"></e-icon>
+                <a @click="toComponent('/input')">输入框</a>
+                <e-icon name="right" ></e-icon>
             </div>
 
         </div>
@@ -101,8 +102,8 @@
                     '     <e-button icon="left">上一页</e-button>\n' +
                     '     <e-button icon="right" icon-position="right">下一页</e-button>\n' +
                     ' </e-button-group>\n' +
-                        '\n' +
-                        '<br>\n'+
+                    '\n' +
+                    '<br>\n' +
                     '\n' +
                     ' <e-button-group>\n' +
                     '     <e-button icon="left">上一页</e-button>\n' +
@@ -114,7 +115,13 @@
         },
         mounted() {
         },
-        methods: {}
+        methods: {
+            toComponent(path) {
+                this.$router.push(
+                    path
+                )
+            }
+        }
 
     }
 </script>

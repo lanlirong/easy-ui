@@ -32,33 +32,11 @@
                     </h2>
                         <p v-for="(cate, index2) in item.children" :key="index2" @click="change(cate.path)" :class="{'active': $route.path === cate.path}">{{cate.name}}</p>
                        </div>
-                    <!--<h2>-->
-                        <!--<svg t="1599047234057" class="icon" viewBox="0 0 1024 1024" version="1.1"-->
-                             <!--xmlns="http://www.w3.org/2000/svg" p-id="8947" width="16" height="16">-->
-                            <!--<path d="M788.48 512L312.32 786.92352V237.09696z" p-id="8948" fill="#333333"></path>-->
-                        <!--</svg>-->
-                        <!--开发指南-->
-                    <!--</h2>-->
-                    <!--<p>前言</p>-->
-                    <!--<p>安装</p>-->
-                    <!--<p>快速上手</p>-->
-                    <!--<h2>-->
-                        <!--<svg t="1599047234057" class="icon" viewBox="0 0 1024 1024" version="1.1"-->
-                             <!--xmlns="http://www.w3.org/2000/svg" p-id="8947" width="16" height="16">-->
-                            <!--<path d="M788.48 512L312.32 786.92352V237.09696z" p-id="8948" fill="#333333"></path>-->
-                        <!--</svg>-->
-                        <!--组件-->
-                    <!--</h2>-->
-                    <!--<p :class="{'active': $route.path === '/button'}" @click="change('/button')">Button 按钮</p>-->
-                    <!--<p @click="change('/input')">Input 输入框</p>-->
-                    <!--<p>Layout 布局</p>-->
-                    <!--<p>Container 布局容器</p>-->
-                    <!--<p>Toast 消息提示</p>-->
-                    <!--<p>DatePicker 日期选择器</p>-->
                 </e-sider>
                 <e-content>
-
+                    <!--<transition name="fade">-->
                     <router-view></router-view>
+                    <!--</transition>-->
                 </e-content>
             </e-layout>
         </e-layout>
@@ -110,7 +88,7 @@
                                 path: '/layout'
                             },
                             {
-                                name: 'Container 布局容器',
+                                name: 'Row-Col 栅格系统',
                                 path: '/container'
                             },
                             {
@@ -235,6 +213,11 @@
             cursor: pointer;
         }
     }
-
+    /*.fade-enter-active, .fade-leave-active {*/
+        /*transition: opacity .4s;*/
+    /*}*/
+    /*.fade-enter, .fade-leave-to !* .fade-leave-active below version 2.1.8 *! {*/
+        /*opacity: 0;*/
+    /*}*/
 
 </style>

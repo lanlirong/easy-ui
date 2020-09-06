@@ -27,6 +27,16 @@ const routes = [
         path: "/layout",
         name: "layout",
         component: ()=>import('../views/layout.vue')
+      },
+      {
+        path: "/container",
+        name: "container",
+        component: ()=>import('../views/container.vue')
+      },
+      {
+        path: "/toast",
+        name: "toast",
+        component: ()=>import('../views/toast.vue')
       }
     ]
   },
