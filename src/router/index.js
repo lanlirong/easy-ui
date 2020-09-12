@@ -37,6 +37,11 @@ const routes = [
         path: "/toast",
         name: "toast",
         component: ()=>import('../views/toast.vue')
+      },
+      {
+        path: "/datepicker",
+        name: "datepicker",
+        component: ()=>import('../views/datepicker.vue')
       }
     ]
   },

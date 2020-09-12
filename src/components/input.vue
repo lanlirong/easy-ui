@@ -20,7 +20,7 @@
         name: 'eInput',
         props: {
             value: {
-                type: String,
+                type: [String, Date],
                 default: ''
             },
             disabled: {
