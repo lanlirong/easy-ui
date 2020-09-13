@@ -1,6 +1,6 @@
 <template>
     <div class="datepicker">
-        <e-date-picker></e-date-picker>
+        <e-date-picker :value="myDate" @input="myDate = $event"></e-date-picker>
     </div>
 </template>
 
@@ -12,7 +12,9 @@
             eDatePicker
         },
         data () {
-            return {}
+            return {
+                myDate: new Date()
+            }
         }
 
     }

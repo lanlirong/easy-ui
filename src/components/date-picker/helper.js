@@ -14,7 +14,21 @@ export default {
       }
       return array
     },
-    getYearMonthDate: getYearMonthDate
+    getYearMonthDate: getYearMonthDate,
+    addMonth(date,n) {
+        let [year,month,day] = getYearMonthDate(date)
+        let newMonth = month + n
+        let copy = new Date(date)
+        copy.setMonth(newMonth)
+        return copy
+    },
+    addYear(date,n) {
+        let [year] = getYearMonthDate(date)
+        let newYear = year + n
+        let copy = new Date(date)
+        copy.setFullYear(newYear)
+        return copy
+    }
 
 }
 
