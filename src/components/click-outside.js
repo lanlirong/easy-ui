@@ -1,5 +1,5 @@
 let onClickDocument = (e) => {
-    let {target} = e
+    let { target } = e
     callbacks.forEach((item) => {
         if (target === item.el || item.el.contains(target)) {
             return
@@ -12,7 +12,7 @@ document.addEventListener('click', onClickDocument)
 let callbacks = []
 export default {
     bind: function (el, binding) {
-        callbacks.push({el, callback: binding.value})
+        callbacks.push({ el, callback: binding.value })
     }
 }
 
@@ -20,4 +20,4 @@ let removeListener = () => {
     document.removeEventListener('click', onClickDocument)
 }
 
-export {removeListener}
+export { removeListener }
