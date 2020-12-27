@@ -98,6 +98,10 @@
                             {
                                 name: 'DatePicker 日期选择器',
                                 path: '/datepicker'
+                            },
+                            {
+                                name: 'Tabs 选项卡',
+                                path: '/Tabs'
                             }
                         ]
                     }
@@ -201,7 +205,7 @@
             }
         }
 
-        .e-content {;
+        .e-content {
             height: 100%;
             width: 80%;
 

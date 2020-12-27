@@ -42,6 +42,11 @@ const routes = [
         path: "/datepicker",
         name: "datepicker",
         component: ()=>import('../views/datepicker.vue')
+      },
+      {
+        path: "/tabs",
+        name: "tabs",
+        component: ()=>import('../views/tabs.vue')
       }
     ]
   },
