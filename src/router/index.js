@@ -11,42 +11,42 @@ const routes = [
     path: "/",
     name: "Index",
     component: Index,
-    redirect: '/button',
-    children:[
+    redirect: "/button",
+    children: [
       {
         path: "/button",
         name: "button",
-        component: ()=>import('../views/button.vue')
+        component: () => import("../views/button.vue")
       },
       {
         path: "/input",
         name: "input",
-        component: ()=>import('../views/input.vue')
+        component: () => import("../views/input.vue")
       },
       {
         path: "/layout",
         name: "layout",
-        component: ()=>import('../views/layout.vue')
+        component: () => import("../views/layout.vue")
       },
       {
         path: "/container",
         name: "container",
-        component: ()=>import('../views/container.vue')
+        component: () => import("../views/container.vue")
       },
       {
         path: "/toast",
         name: "toast",
-        component: ()=>import('../views/toast.vue')
+        component: () => import("../views/toast.vue")
       },
       {
         path: "/datepicker",
         name: "datepicker",
-        component: ()=>import('../views/datepicker.vue')
+        component: () => import("../views/datepicker.vue")
       },
       {
         path: "/tabs",
         name: "tabs",
-        component: ()=>import('../views/tabs.vue')
+        component: () => import("../views/tabs.vue")
       }
     ]
   },

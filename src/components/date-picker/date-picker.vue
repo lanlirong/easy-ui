@@ -10,8 +10,10 @@
           <e-icon name="left2"></e-icon>
         </span>
         <span class="yearAndMonth">
-          <span class="years" @click="onClickYears(display.year)">{{display.year}}年</span>
-          <span @click="onClickMonth">{{display.month+1}}月</span>
+          <span class="years" @click="onClickYears(display.year)"
+            >{{ display.year }}年</span
+          >
+          <span @click="onClickMonth">{{ display.month + 1 }}月</span>
         </span>
         <span class="nextMonth" @click="onClickNextMonth">
           <e-icon name="right2"></e-icon>
@@ -26,10 +28,11 @@
             <div class="e-date-picker-year">
               <span
                 class="e-date-picker-cell e-date-picker-xxx"
-                v-for="(item) in year"
+                v-for="item in year"
                 :key="item"
                 @click="onClickChangeYear(item)"
-              >{{item}}</span>
+                >{{ item }}</span
+              >
               <div class="arrow">
                 <span @click="preYearChoose">
                   <e-icon name="zuojiantou"></e-icon>
@@ -44,10 +47,11 @@
             <div class="e-date-picker-month">
               <span
                 class="e-date-picker-cell e-date-picker-xxx"
-                v-for="(item,index) in month"
+                v-for="(item, index) in month"
                 :key="item"
                 @click="onClickChangeMonth(index)"
-              >{{item}} 月</span>
+                >{{ item }} 月</span
+              >
             </div>
           </div>
           <div v-show="mode === 'days'">
@@ -55,19 +59,27 @@
             <div class="e-date-picker-weekdays">
               <span
                 class="e-date-picker-cell"
-                v-for="i in helper.range(0,6)"
+                v-for="i in helper.range(0, 6)"
                 :key="i"
-              >{{weekdays[i]}}</span>
+                >{{ weekdays[i] }}</span
+              >
             </div>
             <!--日期-->
-            <div class="e-date-picker-row" v-for="i in helper.range(1, 42/7)" :key="i">
+            <div
+              class="e-date-picker-row"
+              v-for="i in helper.range(1, 42 / 7)"
+              :key="i"
+            >
               <span
                 class="e-date-picker-cell"
-                :class="{'currentMonth': isCurrentMonth(visibleDays[(i-1)*7+j-1])}"
-                v-for="j in helper.range(1,7)"
+                :class="{
+                  currentMonth: isCurrentMonth(visibleDays[(i - 1) * 7 + j - 1])
+                }"
+                v-for="j in helper.range(1, 7)"
                 :key="j"
-                @click="onClickCell(visibleDays[(i-1)*7+j-1])"
-              >{{visibleDays[(i-1)*7+j-1].getDate()}}</span>
+                @click="onClickCell(visibleDays[(i - 1) * 7 + j - 1])"
+                >{{ visibleDays[(i - 1) * 7 + j - 1].getDate() }}</span
+              >
             </div>
           </div>
         </div>

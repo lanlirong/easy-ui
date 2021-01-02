@@ -1,41 +1,41 @@
 <template>
-    <transition name="fade">
+  <transition name="fade">
     <div class="e-sider" v-if="visible">
-        <slot></slot>
-        <!--<button  @click="hide">close</button>-->
+      <slot></slot>
+      <!--<button  @click="hide">close</button>-->
     </div>
-    </transition>
+  </transition>
 </template>
 
 <script>
-    export default {
-        name: 'eSider',
-        data() {
-          return {
-              visible: true
-          }
-        },
-        methods: {
-            hide() {
-                this.visible = false
-            },
-
-        }
+export default {
+  name: "eSider",
+  data() {
+    return {
+      visible: true
+    };
+  },
+  methods: {
+    hide() {
+      this.visible = false;
     }
+  }
+};
 </script>
 <style lang="scss" scoped>
-    .e-sider {
-        position: relative;
-        & button {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-    }
-    .fade-enter-active, .fade-leave-active {
-        transition: all .5s;
-    }
-    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-        margin-left: -200px;
-    }
+.e-sider {
+  position: relative;
+  & button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  margin-left: -200px;
+}
 </style>

@@ -1,32 +1,32 @@
 <template>
   <div id="app">
-    <router-view  />
+    <router-view />
   </div>
 </template>
 
-<style lang="scss" >
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+<style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  :root {
-    --button-height: 32px;
-    --font-size: 14px;
-    --button-bg: white;
-    --button-active-bg: #eee;
-    --border-radius: 4px;
-    --color: #333;
-    --border-color: #999;
-    --border-color-hover: #666;
-  }
+:root {
+  --button-height: 32px;
+  --font-size: 14px;
+  --button-bg: white;
+  --button-active-bg: #eee;
+  --border-radius: 4px;
+  --color: #333;
+  --border-color: #999;
+  --border-color-hover: #666;
+}
 
-  #app {
-    /*margin: 20px;*/
-  }
+#app {
+  /*margin: 20px;*/
+}
 
-  body {
-    font-size: var(--font-size);
-  }
+body {
+  font-size: var(--font-size);
+}
 </style>

@@ -28,28 +28,27 @@ import eTabsbody from "@/components/tabs/tabs-body.vue";
 import etabsItem from "@/components/tabs/tabs-item.vue";
 import eTabsPane from "@/components/tabs/tabs-pane.vue";
 
-Vue.component('e-icon', eIcon)
-Vue.component('e-button', eButton)
-Vue.component('e-button-group', eButtonGroup)
-Vue.component('e-input', eInput)
-Vue.component('e-row', eRow)
-Vue.component('e-col', eCol)
-Vue.component('e-layout', eLayout)
-Vue.component('e-header', eHeader)
-Vue.component('e-content', eContent)
-Vue.component('e-footer', eFooter)
-Vue.component('e-sider', eSider)
-Vue.component('e-table', eTable)
+Vue.component("e-icon", eIcon);
+Vue.component("e-button", eButton);
+Vue.component("e-button-group", eButtonGroup);
+Vue.component("e-input", eInput);
+Vue.component("e-row", eRow);
+Vue.component("e-col", eCol);
+Vue.component("e-layout", eLayout);
+Vue.component("e-header", eHeader);
+Vue.component("e-content", eContent);
+Vue.component("e-footer", eFooter);
+Vue.component("e-sider", eSider);
+Vue.component("e-table", eTable);
 
 // Vue.component('e-tabs', etabs)
-Vue.component('e-tabs-head', eTabsHead)
-Vue.component('e-tabs-body', eTabsbody)
-Vue.component('e-tabs-item', etabsItem)
-Vue.component('e-tabs-pane', eTabsPane)
-
+Vue.component("e-tabs-head", eTabsHead);
+Vue.component("e-tabs-body", eTabsbody);
+Vue.component("e-tabs-item", etabsItem);
+Vue.component("e-tabs-pane", eTabsPane);
 
 import plugin from "./components/plugin";
-Vue.use(plugin)
+Vue.use(plugin);
 Vue.config.productionTip = false;
 
 new Vue({
